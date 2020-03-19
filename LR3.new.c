@@ -63,7 +63,7 @@ int main()
             return -1; 
         } 
     
-        if ((fileInfo.st_mode & S_IFMT) == S_IFREG) { 
+        if ((fileInfo.st_mode & __S_IFMT) == __S_IFREG) { 
             files1Counter++;
             dir1Files = (char**)realloc(dir1Files, files1Counter*sizeof(char*));
             dir1Files[files1Counter-1] = (char*)realloc(dir1Files[files1Counter-1], LEN*sizeof(char));
@@ -90,7 +90,7 @@ int main()
             return -1; 
         } 
     
-        if ((fileInfo.st_mode & S_IFMT) == S_IFREG) { 
+        if ((fileInfo.st_mode & __S_IFMT) == __S_IFREG) { 
             files2Counter++;
             dir2Files = (char**)realloc(dir2Files, files2Counter*sizeof(char*));
             dir2Files[files2Counter-1] = (char*)realloc(dir2Files[files2Counter-1], LEN*sizeof(char));
