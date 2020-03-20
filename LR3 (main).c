@@ -21,9 +21,9 @@ int main ()
         printf ("Это родительский процесс pid=%d\n", getpid());
         system("date +\"%T.%3N\"");
         system("ps -x");
+        wait(NULL);
+        wait(NULL);
     }
     else
         printf ("Ошибка вызова fork, потомок не создан\n");
-    wait(NULL);
-    wait(NULL);
 }
